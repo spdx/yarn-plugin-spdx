@@ -38,8 +38,8 @@ git push origin your-new-feature
 7. Create a pull request from your fork to the upstream repository. Make sure that all CI workflows are green. Please reference the fixed issue in the pull request.
 
 ## Building
-We use [@yarnpkg/builder] (https://github.com/yarnpkg/berry/blob/master/packages/yarnpkg-builder/README.md) for building the library.
-To build the library, navigate to the library root and run:
+We use [@yarnpkg/builder] (https://github.com/yarnpkg/berry/blob/master/packages/yarnpkg-builder/README.md) for building.
+To build the plugin, navigate to the root and run:
 ```shell
 yarn build
 ```
