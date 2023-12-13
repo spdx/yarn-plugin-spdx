@@ -30,7 +30,7 @@ jobs:
             set -e
             cd OpossumUI
             yarn install
-            yarn plugin import https://raw.githubusercontent.com/spdx/tools-ts/main/yarn-plugin/bundles/@yarnpkg/plugin-spdx.js
+            yarn plugin import https://raw.githubusercontent.com/spdx/yarn-plugin-spdx/main/bundles/@yarnpkg/plugin-spdx.js
 
       - name: test yarn-plugin help message
         run: |

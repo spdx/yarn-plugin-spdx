@@ -4,7 +4,7 @@ SPDX-FileCopyrightText: 2023 SPDX contributors
 SPDX-License-Identifier: CC0-1.0
 -->
 
-# @spdx/yarn-plugin
+# @yarnpkg/plugin-spdx
 
 A Yarn plugin to create SBOM files in the SPDX format.
 
