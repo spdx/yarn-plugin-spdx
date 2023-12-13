@@ -1,0 +1,44 @@
+# SPDX-FileCopyrightText: 2023 SPDX contributors
+#
+# SPDX-License-Identifier: MIT
+
+name: Write and verify sample sboms
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check repository out
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install node modules
+        run: npm ci
+
+      - name: Build example workflow
+        run: npm run build-examples
+
+      - name: Create sample SBOM
+        run: npm run write-examples
+
+      - name: Install spdx-tools-java
+        run: .github/workflows/scripts/spdx-tools-java-wrapper.sh bootstrap
+
+      - name: Verify minimal SBOM
+        run: .github/workflows/scripts/verify.sh examples/resources/minimal-sample.spdx.json
+
+      - name: Verify basic SBOM
+        run: .github/workflows/scripts/verify.sh examples/resources/spdx-tools-ts.spdx.json
+
+      - name: Verify elaborate SBOM
+        run: .github/workflows/scripts/verify.sh examples/resources/elaborate-sample.spdx.json

@@ -1,0 +1,114 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "comment": "This is a document for testing",
+  "creationInfo": {
+    "created": "2023-11-03T16:17:38Z",
+    "creators": [
+      "Person: test creator",
+      "Tool: SPDX Tools TS"
+    ],
+    "comment": "This document was created automatically",
+    "licenseListVersion": "3.14"
+  },
+  "dataLicense": "CC0-1.0",
+  "externalDocumentRefs": [
+    {
+      "checksum": {
+        "algorithm": "SHA1",
+        "checksumValue": "5d41402abc4b2a76b9719d911017c592cb8d5e0e"
+      },
+      "externalDocumentId": "DocumentRef-referenced-document-id",
+      "spdxDocument": "https://referenced-document.com/paths-to/document-4fced07f-b166-4203-a409-4275b7c5e642"
+    }
+  ],
+  "name": "first-document",
+  "spdxVersion": "SPDX-2.3",
+  "documentNamespace": "https://my-website.com/paths-to-spdx-document/my-document-21b3f009-ac30-4da3-a295-7172e0c4ba49",
+  "packages": [
+    {
+      "name": "first package",
+      "downloadLocation": "https://download-location.com",
+      "SPDXID": "SPDXRef-first-package",
+      "filesAnalyzed": true,
+      "packageVerificationCode": {
+        "packageVerificationCodeValue": "b65013ce770696a72a0dded749a5058e5f8e2a4d"
+      },
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "6a204bd89f3c8348bff90840990a7ab50fdc30ce"
+        }
+      ],
+      "licenseInfoFromFiles": [
+        "MIT"
+      ],
+      "externalRefs": [
+        {
+          "comment": "test reference comment",
+          "referenceCategory": "OTHER",
+          "referenceLocator": "https://github.com/test-repo",
+          "referenceType": "test reference type"
+        }
+      ],
+      "attributionTexts": [
+        "This is an attribution text"
+      ],
+      "builtDate": "2023-11-03T16:17:38Z",
+      "comment": "This is a comment",
+      "copyrightText": "Copyright",
+      "description": "This is a description",
+      "homepage": "https://homepage.com",
+      "licenseComments": "This is a comment",
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "originator": "Person: test originator",
+      "packageFileName": "first-package-1.0.0.tar.gz",
+      "primaryPackagePurpose": "APPLICATION",
+      "releaseDate": "2023-11-03T16:17:38Z",
+      "sourceInfo": "https://source-info.com",
+      "summary": "This is a summary",
+      "supplier": "Person: test supplier",
+      "validUntilDate": "2023-11-03T16:17:38Z",
+      "versionInfo": "1.0.0"
+    },
+    {
+      "name": "second package",
+      "downloadLocation": "https://download-location.com",
+      "SPDXID": "SPDXRef-second-package",
+      "filesAnalyzed": false,
+      "licenseInfoFromFiles": []
+    }
+  ],
+  "files": [
+    {
+      "SPDXID": "SPDXRef-f9c464a7-42c6-45ef-a322-342419a579a2",
+      "fileName": "first file",
+      "checksums": [
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "6a204bd89f3c8348bff90840990a7ab50fdc30ce"
+        }
+      ],
+      "fileTypes": [
+        "TEXT"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-first-package",
+      "relationshipType": "DESCRIBES"
+    },
+    {
+      "spdxElementId": "SPDXRef-first-package",
+      "relatedSpdxElement": "SPDXRef-second-package",
+      "relationshipType": "DEPENDENCY_OF"
+    },
+    {
+      "spdxElementId": "SPDXRef-first-package",
+      "relatedSpdxElement": "SPDXRef-f9c464a7-42c6-45ef-a322-342419a579a2",
+      "relationshipType": "CONTAINS"
+    }
+  ]
+}
