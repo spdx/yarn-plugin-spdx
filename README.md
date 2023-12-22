@@ -28,8 +28,8 @@ yarn spdx
 Note: Before using the plugin, make sure to run `yarn install` to install all dependencies for the current project.
 
 ## Limitations
-- The plugin currently only supports SPDX json output format.
-- For Yarn V3, the plugin currently only supports the `node-modules` linker.
+- The plugin currently only supports SPDX 2.3 and JSON output format.
+- The plugin currently only supports the `node-modules` linker.
 - The plugin does currently not support monorepos.
 
 ## Attributions
